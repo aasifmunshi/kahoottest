@@ -10,7 +10,7 @@
     "kahoot.js-latest": "^1.0.7"
   },
   "engines": {
-    "node": "18.x",
+    "node": "14.x",
     "python": "3.11.x"
   },
   "license": "MIT",
