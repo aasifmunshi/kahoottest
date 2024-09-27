@@ -4,7 +4,7 @@
   "description": "Arslaan's Kahoot Bot, the name explains it all.",
   "main": "server.js",
   "scripts": {
-    "start": "./start.sh"
+    "start": "sh start.sh"
   },
   "dependencies": {
     "@fastify/formbody": "^7.4.0",
