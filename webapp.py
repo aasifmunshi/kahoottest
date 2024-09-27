@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 
 def run_kahoot_bot(game_pin, nickname, num_bots):
-    # Run the kahoot bot script in a separate thread
     flood_bots(game_pin, nickname, num_bots)
 
 
@@ -29,4 +28,4 @@ def start():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=8080)

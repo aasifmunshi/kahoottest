@@ -7,15 +7,10 @@
     "start": "sh start.sh"
   },
   "dependencies": {
-    "@fastify/formbody": "^7.4.0",
-    "@fastify/static": "^6.10.2",
-    "@fastify/view": "^8.0.0",
-    "fastify": "^4.21.0",
-    "handlebars": "^4.7.8",
     "kahoot.js-latest": "^1.0.7"
   },
   "engines": {
-    "node": "14.x",
+    "node": "18.x",
     "python": "3.11.x"
   },
   "license": "MIT",
