@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from threading import Thread
 from kahoot import flood_bots
+import requests
 
 app = Flask(__name__)
 
@@ -9,6 +10,12 @@ def run_kahoot_bot(game_pin, nickname, num_bots):
     flood_bots(game_pin, nickname, num_bots)
 
 
+def ping_self():
+    while True:
+      requests.get("https://arslaans-kahoot-bot.glitch.me")
+      time.sleep(5)
+  
+  
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -27,5 +34,8 @@ def start():
     return jsonify({'status': 'Bots are joining!'})
 
 
+  
 if __name__ == '__main__':
+    ping_thread = Thread(target=ping_self)
+    ping_thread.start()
     app.run(host='0.0.0.0', port=8080)
